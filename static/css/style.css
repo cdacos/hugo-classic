@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #613DC1;
+}
+
+html { overflow-y: scroll; }
+
 body {
   max-width: 800px;
   margin: auto;
@@ -22,7 +28,7 @@ output:
 
 /* Header and Footer */
 .menu li { display: inline-block; }
-.article-meta, .menu a {
+.menu a {
   text-decoration: none;
   background: #D2D6EF;
   color: #FFF;
@@ -30,9 +36,14 @@ output:
   border-radius: 5px;
 }
 
-.terms { font-size: .9em; }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
+.article-meta { color: #666; font-size: 90%; font-family: monospace; }
+.terms { font-size: 1em; text-transform: capitalize; float: right; }
+.terms>a { margin-left: 1em; }
+.menu, footer { text-align: center; }
+h1 { font-size: 2em; line-height: 1.5em; }
+.date { text-align: right; font-size: 1em; }
+
+footer { font-size: 90%; font-family: monospace; }
 footer a { text-decoration: none; }
 
 .pull-left {
@@ -43,7 +54,7 @@ footer a { text-decoration: none; }
 }
 
 a {
-  color: #613DC1;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -58,8 +69,7 @@ header {
     height: 1.75rem;
     font-family: "Lucida Console" , "Liberation Mono";
     font-size: .875rem;
-    background: #613DC1;
-    border-bottom: 1px solid #000;
+    background: var(--primary-color);
 }
 
 header ul,
