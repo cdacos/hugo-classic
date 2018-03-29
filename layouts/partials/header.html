@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
     {{ if .Site.Params.primary_color }}
-    <style>
-    :root {
-      --primary-color: #3F46BF;
-    }
-    </style>
+    <style> :root { --primary-color: {{ .Site.Params.primary_color }}; } </style>
     {{ end }}
+    {{ partial "head_custom.html" . }}
   </head>
 
   <body>
-    {{ partial "head_custom.html" . }}
+    {{ partial "header_custom.html" . }}
